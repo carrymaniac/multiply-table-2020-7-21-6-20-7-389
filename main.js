@@ -15,13 +15,12 @@ function generateMultiplyAllLine(start, end){
 }
 
 function generateMultiplyOneLine(lineStart,lineEnd){
-    let str = "";
+    let strArray = new Array();
     for(let i = lineStart; i<=lineEnd; i++){
-        str += ""+i+"*"+lineEnd+"="+(i*lineEnd);
-        str += "\t"
+        let str = ""+i+"*"+lineEnd+"="+(i*lineEnd);
+        strArray.push(str);
     }
-    str = str.substring(0,str.length-1);
-    return str;
+    return strArray.join ("\t");
 }
 
 function connectMultiplyOneLine(resultArr){
